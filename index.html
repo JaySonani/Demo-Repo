@@ -1,0 +1,111 @@
+<html>
+    <head>
+        <title>
+            Timer
+        </title>
+        <style>
+        .container{
+            position: absolute;
+            margin: 0;
+            padding: 0;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            border: 4px solid cyan;
+            height: 500px;
+            width: 500px;
+            border-radius: 24px;
+        }
+        .time{
+            position: absolute;
+            top: 30%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            font-family: calibri;
+            font-size: 100px;
+        }
+        .buttons{
+            position: absolute;
+            top: 60%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            font-family: calibri;
+            font-size: 50px;
+        }
+        .buttons input[type="button"]{
+            font-size: 20px;
+            border: 2px solid cyan;
+            height: 40px;
+            width: 110px;
+            border-radius: 24px;
+            background: cyan;
+            cursor: pointer;
+            /* font-weight: 700; */
+        }
+
+        .buttons input[type="button"]:hover{
+            border: 2px solid black;
+            transition: .5s;
+        }
+
+        </style>
+
+        <script>
+        var count = 1;
+        var min = 1;
+        var interval;
+        function startTimer(){
+            
+            interval = setInterval("increaseTime()",1000);
+            var buttonText = document.getElementById("startButton").value;
+            if(buttonText == "START")
+                document.getElementById("startButton").value = "FASTER";
+
+        }
+
+        function increaseTime(){
+            var time = document.getElementById("timetext").innerHTML;
+            time = time.substring(0,2);
+            if(count < 10)
+                document.getElementById("timetext").innerText = time + ":0" + count++;
+            else 
+                document.getElementById("timetext").innerText = time + ":" + count++;
+
+            if(count == 59){
+                count = 0;
+                if(min < 10){
+                    if(count < 10)
+                        document.getElementById("timetext").innerText = "0" + min++ + ":0" + count++;
+                    else
+                        document.getElementById("timetext").innerText = "0" + min++ + ":" +  count++;    
+                }
+                else  {
+                    if (count < 10)
+                        document.getElementById("timetext").innerText = min++ + ":0" + count++;
+                    else
+                        document.getElementById("timetext").innerText = min++ + ":" + count++;    
+                }
+            }
+        }
+
+        function stopTimer(){
+            // document.getElementById("timetext").innerHTML = "00:00";
+            clearInterval(interval);
+
+        }
+        
+        
+        </script>
+    </head>
+    <body>
+        <div class="container">
+            <div class="time">
+                <aa id="timetext">00:00</aa>
+            </div>
+            <div class="buttons">
+                <input type="button" value="START" id="startButton" onclick="startTimer()">
+                <input type="button" value="STOP" onclick="stopTimer()">
+            </div>
+        </div>
+    </body>
+</html>
