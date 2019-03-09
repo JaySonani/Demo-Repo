@@ -1,0 +1,1 @@
+This is a simple stop watch web application.
