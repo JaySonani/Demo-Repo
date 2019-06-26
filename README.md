@@ -11,6 +11,6 @@ Document Object Model
 
 When you click START button multiple time, the timer gets fasters for some unknown reason and once it got speed, it never stops!
 
-# Screenshot
+## Screenshot
 
 <img src="output.png" width="400">
