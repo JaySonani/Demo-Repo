@@ -1,4 +1,7 @@
+# Stop-Watch
+
 This is a simple stop watch web application.
+
 ## What I learned
 
 JavaScript
