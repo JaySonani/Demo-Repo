@@ -13,4 +13,4 @@ When you click START button multiple time, the timer gets fasters for some unkno
 
 # Screenshot
 
-![](output.png)
+<img src="output.png" width="400">
