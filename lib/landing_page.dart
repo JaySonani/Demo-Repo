@@ -83,49 +83,8 @@ class _LandingPageState extends State<LandingPage>
                         Tab(
                           child: Text("Contact"),
                         ),
-                        // MenuButton(
-                        //   label: "Home",
-                        //   id: 0,
-                        // ),
-                        // MenuButton(
-                        //   label: "About",
-                        //   id: 1,
-                        // ),
                       ],
                     ),
-                    // child: Row(
-                    //   mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    //   children: [
-                    //     MenuButton(
-                    //       label: "Home",
-                    //       id: 0,
-                    //     ),
-                    //     MenuButton(
-                    //       label: "About",
-                    //       id: 1,
-                    //     ),
-                    //     MenuButton(
-                    //       label: "Technologies",
-                    //       id: 2,
-                    //     ),
-                    //     MenuButton(
-                    //       label: "Work",
-                    //       id: 3,
-                    //     ),
-                    //     MenuButton(
-                    //       label: "Projects",
-                    //       id: 4,
-                    //     ),
-                    //     MenuButton(
-                    //       label: "Contact",
-                    //       id: 5,
-                    //     ),
-                    //     // MenuButton(
-                    //     //   label: "Resume",
-                    //     //   id: 6,
-                    //     // ),
-                    //   ],
-                    // ),
                   ),
                 ],
               ),
@@ -159,39 +118,3 @@ class _LandingPageState extends State<LandingPage>
     );
   }
 }
-
-// class MenuButton extends StatelessWidget {
-//   final String label;
-//   final int id;
-//   MenuButton({this.label, this.id});
-
-//   @override
-//   Widget build(BuildContext context) {
-//     return Container(
-//       width: 120,
-//       height: 50,
-//       child: MaterialButton(
-//         // style: ButtonStyle(
-//         //   backgroundColor: MaterialStateProperty.resolveWith<Color>(
-//         //     (Set<MaterialState> states) {
-//         //       if (states.contains(MaterialState.pressed))
-//         //         return Theme.of(context).colorScheme.primary.withOpacity(0.5);
-//         //       return Colors.white; // Use the component's default.
-//         //     },
-//         //   ),
-//         // ),
-//         onPressed: () {
-//           pageController.animateToPage(id,
-//               duration: Duration(milliseconds: 300), curve: Curves.easeInOut);
-//         },
-//         child: Text(
-//           label,
-//           style: TextStyle(
-//             fontSize: 15,
-//             color: Colors.black,
-//           ),
-//         ),
-//       ),
-//     );
-//   }
-// }
